@@ -37,7 +37,7 @@ impl Icons {
     const FILE: char            = '\u{f15b}';  // 
     const FILE_3D: char         = '\u{f01a7}'; // 󰆧
     const FILE_OUTLINE: char    = '\u{f016}';  // 
-    const FOLDER: char          = '\u{e5ff}';  // 
+    const FOLDER: char          = '\u{f07b}';  // 
     const FOLDER_CONFIG: char   = '\u{e5fc}';  // 
     const FOLDER_GIT: char      = '\u{e5fb}';  // 
     const FOLDER_GITHUB: char   = '\u{e5fd}';  // 
@@ -144,7 +144,7 @@ impl Icons {
     const UNITY: char           = '\u{e721}';  // 
     const VECTOR: char          = '\u{f0559}'; // 󰕙
     const VIDEO: char           = '\u{f03d}';  // 
-    const VIM: char             = '\u{e7c5}';  // 
+    const VIM: char             = '\u{e62b}';  // 
     const WRENCH: char          = '\u{f0ad}';  // 
     const XML: char             = '\u{f05c0}'; // 󰗀
     const YAML: char            = '\u{e6a8}';  // 
@@ -228,7 +228,7 @@ const FILENAME_ICONS: Map<&'static str, char> = phf_map! {
     ".htaccess"           => Icons::CONFIG,         // 
     ".htpasswd"           => Icons::CONFIG,         // 
     ".idea"               => Icons::INTELLIJ,       // 
-    ".ideavimrc"          => Icons::VIM,            // 
+    ".ideavimrc"          => Icons::VIM,            // 
     ".inputrc"            => Icons::CONFIG,         // 
     ".kshrc"              => Icons::SHELL,          // 󱆃
     ".login"              => Icons::SHELL,          // 󱆃
@@ -252,8 +252,8 @@ const FILENAME_ICONS: Map<&'static str, char> = phf_map! {
     ".rvmrc"              => Icons::LANG_RUBY,      // 
     ".SRCINFO"            => '\u{f303}',            // 
     ".tcshrc"             => Icons::SHELL,          // 󱆃
-    ".viminfo"            => Icons::VIM,            // 
-    ".vimrc"              => Icons::VIM,            // 
+    ".viminfo"            => Icons::VIM,            // 
+    ".vimrc"              => Icons::VIM,            // 
     ".Xauthority"         => Icons::CONFIG,         // 
     ".xinitrc"            => Icons::CONFIG,         // 
     ".Xresources"         => Icons::CONFIG,         // 
@@ -999,7 +999,7 @@ const EXTENSION_ICONS: Map<&'static str, char> = phf_map! {
     "vi"             => '\u{e81e}',              // 
     "vhdl"           => Icons::LANG_HDL,         // 󰍛
     "video"          => Icons::VIDEO,            // 
-    "vim"            => Icons::VIM,              // 
+    "vim"            => Icons::VIM,              // 
     "vmdk"           => Icons::DISK_IMAGE,       // 
     "vob"            => Icons::VIDEO,            // 
     "vsix"           => '\u{f0a1e}',             // 󰨞
@@ -1068,7 +1068,7 @@ pub fn icon_for_file(file: &File<'_>) -> char {
             if file.is_empty_dir() {
                 &Icons::FOLDER_OPEN // 
             } else {
-                &Icons::FOLDER // 
+                &Icons::FOLDER // 
             }
         })
     } else if let Some(icon) = FILENAME_ICONS.get(file.name.as_str()) {
